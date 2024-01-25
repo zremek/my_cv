@@ -6,4 +6,4 @@ in cv.rmd deleted unused sections from "teaching experience" to "press" and chan
 
 in cv_printing_functions.r changed `googlesheets4::sheets_deauth()` to `googlesheets4::gs4_deauth()`
 
-  
+removed https and _ before and after url to raw.githack html cv in cv.rmd, `"[View this CV online with links](https://raw.githack.com/zremek/my_cv/main/cv.html)"`

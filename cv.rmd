@@ -28,7 +28,6 @@ CV <- create_CV_object(
 
 ```
 
-
 ```{r}
 # When in pdf export mode the little dots are unaligned, so fix that with some conditional CSS.
 if(params$pdf_mode) {
@@ -41,9 +40,7 @@ if(params$pdf_mode) {
 }
 ```
 
-
-Aside
-================================================================================
+# Aside
 
 ```{r}
 # Build interactive network of positions colored by section
@@ -51,77 +48,56 @@ Aside
 datadrivencv::build_network_logo(CV$entries_data)
 ```
 
-
 ```{r}
 if(params$pdf_mode){
-  cat("View this CV online with links at _https://github.com/zremek/my_cv/raw/master/zremek_cv.html_")
+  cat("[View this CV online with links](https://raw.githack.com/zremek/my_cv/main/cv.html)")
 } else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/zremek/my_cv/raw/master/zremek_cv.pdf)")
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/zremek/my_cv/blob/main/cv.pdf)")
 }
 ```
 
-Contact {#contact}
---------------------------------------------------------------------------------
+## Contact {#contact}
 
 ```{r}
 CV %>% print_contact_info()
 ```
 
-
-
-Language Skills {#skills}
---------------------------------------------------------------------------------
+## Language Skills {#skills}
 
 ```{r}
 CV %>% print_skill_bars()
 ```
 
+## Disclaimer {#disclaimer}
 
-
-Disclaimer {#disclaimer}
---------------------------------------------------------------------------------
-
-Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
+Made with the R package [**pagedown**](https://github.com/rstudio/pagedown).
 
 The source code is available [on github.com/zremek/my_cv](https://github.com/zremek/my_cv).
 
 Last updated on `r Sys.Date()`.
 
+# Main
 
-
-Main
-================================================================================
-
-Remigiusz Żulicki {#title}
---------------------------------------------------------------------------------
+## Remigiusz Żulicki {#title}
 
 ```{r}
 # Note the special double pipe so we modify the CV object in place
 CV %<>% print_text_block("intro") 
 ```
 
-
-
-Education {data-icon=graduation-cap data-concise=true}
---------------------------------------------------------------------------------
+## Education {data-icon="graduation-cap" data-concise="true"}
 
 ```{r}
 CV %<>% print_section('education')
 ```
 
-
-
-Research Experience {data-icon=laptop}
---------------------------------------------------------------------------------
+## Research Experience {data-icon="laptop"}
 
 ```{r}
 CV %<>% print_section('research_positions')
 ```
 
-
-
-Industry Experience {data-icon=suitcase}
---------------------------------------------------------------------------------
+## Industry Experience {data-icon="suitcase"}
 
 ::: aside
 ```{r}
@@ -134,22 +110,15 @@ CV %<>% print_section('industry_positions')
 ```
 
 <!-- These breaks just force a new page so section doesnt get cut off -->
-<br>
-<br>
-<br>
 
+<br> <br> <br>
 
-
-Selected Publications, Posters, and Talks {data-icon=book}
---------------------------------------------------------------------------------
+## Selected Publications, Posters, and Talks {data-icon="book"}
 
 ```{r}
 CV %<>% print_section('academic_articles')
 ```
 
-
-
 ```{r}
 CV %<>% print_links()
 ```
-

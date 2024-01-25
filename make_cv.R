@@ -11,8 +11,8 @@
 datadrivencv::use_datadriven_cv(
   full_name = "Remigiusz Żulicki",
   data_location = "https://docs.google.com/spreadsheets/d/13uQcsdVCP2Mes7t-Xl4--kYbpbm0a0_H2PKz4aW1nAU/edit?usp=sharing",
-  pdf_location = "https://github.com/zremek/my_cv/raw/master/zremek_cv.pdf",
-  html_location = "https://github.com/zremek/my_cv/raw/master/zremek_cv.html",
+  pdf_location = "https://github.com/zremek/my_cv/blob/main/cv.pdf",
+  html_location = "https://raw.githack.com/zremek/my_cv/main/cv.html",
   source_location = "https://github.com/zremek/my_cv"
 )
 
