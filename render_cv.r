@@ -10,8 +10,6 @@ rmarkdown::render("cv.rmd",
                   params = list(pdf_mode = FALSE),
                   output_file = "cv.html")
 
-# replace error - googlesheets4::gs4_deauth() #######
-
 # Knit the PDF version to temporary html location
 tmp_html_cv_loc <- fs::file_temp(ext = ".html")
 rmarkdown::render("cv.rmd",
